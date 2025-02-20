@@ -17,7 +17,7 @@ This is a C++ program that finds the longest and second-longest compound words f
 
 **KEY FEATURES**
 
-1.Simple Implementation – Uses recursion to check word formation.
+ 1.Simple Implementation – Uses recursion to check word formation.
 
 2. Basic Set Operations – Uses unordered_set for quick word lookups.
   
@@ -59,26 +59,37 @@ This is a C++ program that finds the longest and second-longest compound words f
 2.SPACE Complexity → O(N * L)
 
 
-**COMPARISON OF BOTH APPROACHES**
+**BRUTE FORCE vs OPTIMIZED APPROACH**
 
-1.Feature              	                    Brute Force (Slow)	                               Optimized (Fast)
+**BRUTE FORCE APPROACH**
 
-2.Method	                                  Tries every split recursively	                     Uses Sorting + DP
+1.Tries every possible split of a word using recursion.
 
-3.Time Complexity      	                    O(N * 2^L) (Exponential)	                         O(N log N + N * L²) (Efficient)
+2.Slow for large inputs because it checks words multiple times.
 
-4.Sorting             	                    ❌ No Sorting                                    	✅ Sorts words by length
+3.No sorting, so it doesn't prioritize longer words first.
 
-5.Lookup Method	                            ❌ Checks full list (O(N))	                      ✅ unordered_set (O(1))
+4.Risk of stack overflow due to deep recursion.
 
-6.Recursive Stack Issues	                  🚨 Stack overflow for large inputs              	✅ No recursion, uses DP
+5.Time Complexity: O(N * 2^L) (Very slow).
 
-7.Performance on Large Inputs	              ❌ Very slow	                                    ✅ Fast and scalable
+
+**OPTIMIZED APPROACH**
+
+1.Uses Sorting + Dynamic Programming (DP) to check words efficiently.
+
+2.Faster execution, as it avoids unnecessary calculations.
+
+3.Sorts words by length, so longer words are checked first.
+
+4.No recursion, so no stack overflow issues.
+
+5.Time Complexity: O(N log N + N * L²) (Much faster).
 
 **CONCLUSION**
 
 1.If the dataset is small, brute force can work.
 
 2. If the dataset is large, the optimized approach is much better.
-3. 
-4. For real-world applications, always use the optimized approach. 
+ 
+3. For real-world applications, always use the optimized approach. 
