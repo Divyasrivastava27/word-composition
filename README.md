@@ -1,4 +1,5 @@
 **COMPOUND WORD FINDER**
+
 This is a C++ program that finds the longest and second-longest compound words from a given list of words. A compound word is a word that can be formed by combining two or more other words from the same list.
 
 **BRUTE FORCE APPROACH**
